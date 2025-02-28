@@ -1,0 +1,4 @@
+Sitemap: https://www.monsite.com/sitemap.xml
+user-agent: Googlebot
+Disallow: /admin/
+Disallow: /profile/

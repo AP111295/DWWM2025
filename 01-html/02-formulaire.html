@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Les bases du HTML</title>
+</head>
+<body>
+    <!-- Un formulaire en get, enverra les informations du formulaire directment dans l'url, "?nomChamp1=valeur1&nomChamps2=valeur2" -->
+   <form action="hhtps://www.google.fr/search" method="get">
+    <!-- lable permet d'indiquer le nom/role d'un champ-->
+    <label for="recherche"> Recherche :</label>
+    <!-- le name indique le nom du champ -->
+     <!-- input is always inline -->
+<input type="text" name="q" id="recherche">
+<!-- le type submit crée un bouton de soumission (envoi) de formulaire -->
+<input type="submit" value="Envoyer">
+   </form>
+   <hr>
+   <form action="./02-formulaire.html" method="post">
+    
+    <input type="text" name="prenom" value="Maurice" readonly>
+    <br>
+    <!-- placeholder permet d'afficher un texte qui s'effacera automatiquement quand l'utilisature entr une information diabled , permet de desactiver le champ-->
+    <input type="text" name="Nom" id="nom" placeholder="votre nom" disabled>
+    <br>
+    <!-- permet un champ date avec calendier -->
+    <input type="date" name="birthday" id="birthday">
+    <br>
+    <!-- permet une selection de couleur -->
+     <input type="color" name="couleur" id="couleur">
+     <br>
+     <!-- Vérifie que le contenu soit bien conforme a la syntaxe -->
+     <input type="email" name="mail" id="mail">
+     <br>
+     <!-- affiche les caractéres sous forme de point -->
+     <input type="password" name="mdp" id="mdp">
+     <br>
+     <!-- permet l'envoi de fichier, multiple permet de pouvoir selectionner plusieurs  fichier d'un coup -->
+     <input type="file" name="fichier" id="fichier" multiple>
+     <br>
+     <input type="hidden" name="csrf">
+     <!-- textarea perment un champ texte plus grand qu'un simple input et gérant les lignes mutiples -->
+     <textarea name="commentaire" id="comment"></textarea>
+     <fieldset>
+        <legend>
+            Quel catégorie appreciez vous ?
+        </legend>
+        <input type="checkbox" name="aventure" id="av">
+        <label for="av">aventure</label>
+        <br>
+        <input type="checkbox" name="Romantique" id="ro">
+        <label for="ro">Romantique</label>
+        <br>
+        <input type="checkbox" name="Horreur" id="ho">
+        <label for="ho">Horreur</label>
+        <br>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Choisi ton langage préfere ?
+        </legend>
+        <!-- Les radio portant le meme nom, se decoche lorsque l'un d'entre eux est coche -->
+        <input type="radio" name="langage" id="html">
+        <label for="html">html</label>
+        <br>
+        <input type="radio" name="langage" id="CSS">
+        <label for="CSS">CSS</label>
+        <br>
+        <input type="radio" name="langage" id="Javascript">
+        <label for="Javascript">Javascript</label>
+        <!-- pensez a ajouter une value aux radios, sinon la seule info qui sera envoyé c'est "langage=on" -->
+    </fieldset>
+    <!-- Crée une liste a choix -->
+    <select name="repas" id="repas" multiple>
+        <!-- cest la value qui est envoyé avec le formulaire et non le tecte dans l'option -->
+        <option value="Pizza">Pizza</option>
+        <option value="Burger" selected>Burger</option>
+        <option value="Pasta">Pates</option>
+    </select>
+    <!-- L'attribut required rend un champ obligatoire a remplir pour pouvoir soumettre le formulaire -->
+    <input type="text" name="test" id="test" required>
+     <button type="submit"> Envoyer</button>
+     <!-- Crée un bouton sans effet -->
+     <input type="button" value="Coucou">
+</form>
+</body>
+</html>
+

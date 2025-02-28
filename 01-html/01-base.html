@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Les bases du HTML</title>
+</head>
+
+<body>
+    <!-- Balises block sémantiques.aucun affet -->
+    <header id=""></header>
+    <footer></footer>
+    <nav></nav>
+    <!-- Balise block par défaut -->
+    <div></div>
+    <!-- Ne devrait apparaitre qu'une fois dans la page -->
+    <main> main</main>
+    <!-- h$*6>{Titre $} 
+         Balise de titre, du 1 le plus important , au 6. Posséde une marge en haut et en bas, 
+         hange la taille du texte et le met gras. L'ordre d'importance des titre doit 
+         etre respecté -->
+    <h1>Titre 1</h1>
+    <h2>Titre 2</h2>
+    <h3>Titre 3</h3>
+    <h4>Titre 4</h4>
+    <h5>Titre 5</h5>
+    <h6>Titre 6</h6>
+    <!--Blise sémantique qui devrqit contenir un titre  -->
+    <section>
+        <h2>My Section</h2>
+    </section>
+    <article>
+        <h3>Mon article</h3>
+    </article>
+    <!-- Unordered List, ne peut contenir ques des balise 'li' -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- Pareil qu'un ul, mais avec un nom différent -->
+    <menu>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </menu>
+    <!-- ol>li*3>{Item $} -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- alt z for continuin the large text in the next line -->
+    <!-- Paragraphe, il ne peut contenir que du texte ou des éléments inline -->
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima ipsum quisquam dolore delectus iure incidunt
+        voluptates error libero dolores veritatis officiis ratione quis, saepe obcaecati, qui dolor fugit odit suscipit!
+    </p>
+    <!-- preformate permet de garder le formatage du document, saut a la ligne, espace... -->
+    <pre>      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima ipsum  quisquam dolore delectus iure incidunt  voluptates error libero dolores 
+        veritatis officiis ratione quis, saepe obcaecati, qui dolor fugit odit suscipit!
+    </pre>
+    <!--  -->
+    <a href="./index.html">index</a>
+    <!-- target blank permet d'ouvrir le lien dans un nouvel ongle -->
+    <a href="https://www.goggle.fr/search?q=pizza" targer="_blank">Google</a>
+    <!-- un # suivi du nom d'un id permet un lien interne a la page -->
+    <a href="#hauteDePage">Haute de page</a>
+    <!-- Crée une ligne séparatrice -->
+    <hr>
+    <p>
+        <!-- strong indique l'importance d'un texte  -->
+        <strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima ipsum </strong>
+
+        <br>quisquam dolore delectus iure incidunt voluptates error libero dolores
+        <!-- b est utilise pour attiré l'attention sur un text -->
+        <b>obcaecati, qui dolor fugit odit suscipit!</b>
+        <!-- u pour faire ressortir un texte comme un nom propre ou une erreur ( making underline the text) -->
+        <br> <u>veritatis officiis ratione quis, saepe obcaecati, qui dolor fugit odit suscipit!</u>
+        <!-- em permet de mettre l'emphase sur du texte -->
+        <em>voluptates error libero dolores veritatis officiis ratione quis, saepe obcaecati, qui dolor fugit odit
+            suscipit!</em> <br>
+        <!-- i permet de faire ressortire une citation -->
+        <i>obcaecati, qui dolor fugit odit suscipit!</i> <br>
+        <!-- abbr marque une abréviation, title (qui peut utilise n'importe ou) permet une info bulle au survol -->
+        <abbr title="Hyper text markup language">HTML</abbr>
+        <img src="/01-html/html.logo.png" alt="Logo html" width="250">
+        <video src="/01-html/Videobeach.mp4.crdownload" width="500" controls autoplay muted loop
+            poster="/01-html/html.logo.png"></video>
+        <audio src=""></audio>
+        <!-- Insérer une autre page internet  -->
+        <iframe src="./02-formulaire.html" ></iframe>
+        <!-- Balise inline sans aucun effet ou régle -->
+         <span class="maclasse ma-seconde-classe"></span>
+         <!-- la classe permit d'identifier un élement, mais a la difference de l'id, on peut avoir plusieurs classes séparés d'un espace, et une meme classe peut etre appliqueé a plusieurs éléments. -->
+
+
+    </p>
+</body>
+
+</html>
