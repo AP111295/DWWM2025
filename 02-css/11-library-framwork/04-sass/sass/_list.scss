@@ -1,0 +1,31 @@
+/* 
+   ajouter "..." derire un parametre, permet de taire contenir un nombre infini de paramétre, 
+   dans une variable
+*/
+
+@mixin liste($li...)
+{
+    // @debug $li;
+    /* @for permet de créer une boucle allant du chiffre indiqueé aprées "from" à celui indiqué aprés "to"
+    cette boucle va répéter l'action entre accolade en remplacecant la valeur de "$i" à chaque fois*/ 
+   
+   @for $i from 0 to length($li) 
+   {
+    // @debug $i;
+    // nth permet de récupérer un élément d'une liste.
+    // @debug nth($li, $i+1);
+    // #{} permet d'afficher un texte en tant due selecteur.
+    // Par exemple, ici bous lui demendons d'afficher les ".truc1", ".truc2"... passés en paramètre.
+
+    #{nth($li, $i+1)}
+    {
+        font-size: 16px + $i*10;
+    }
+
+   }
+}
+ul
+{
+    background-color: cornflowerblue;
+    @include liste(".truc1", ".truc2",".truc3", ".truc4", ".truc5");
+}

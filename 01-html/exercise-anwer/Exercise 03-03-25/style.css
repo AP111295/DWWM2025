@@ -1,0 +1,32 @@
+body{
+    background-image: linear-gradient(to right, #E96443,#904E95);
+    text-align: center;
+    justify-content: center;
+   
+}
+div
+{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    bottom: 50%;
+    right: calc(50% - 100px);
+    border-radius: 50%;
+    
+}
+.cloud1
+{
+    /*  translate(0, -10%); the first value of in the bracket is verticle and next horizental and therefore in negative)  */
+ transform: translate(0, -30%);
+}
+.cloud2
+{
+    /* (- negative value) because its vertically left */
+    transform: translate(-30%, 0);
+}
+.cloud3
+{ 
+    /* 30 or a positive value because its vertically right */
+    transform: translate(30%, 0);
+}

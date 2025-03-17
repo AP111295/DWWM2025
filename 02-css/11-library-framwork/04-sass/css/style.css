@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* 
+   ajouter "..." derire un parametre, permet de taire contenir un nombre infini de paramétre, 
+   dans une variable
+*/
+ul {
+  background-color: cornflowerblue;
+  /* @for permet de créer une boucle allant du chiffre indiqueé aprées "from" à celui indiqué aprés "to"
+  cette boucle va répéter l'action entre accolade en remplacecant la valeur de "$i" à chaque fois*/
+}
+ul .truc1 {
+  font-size: 16px;
+}
+ul .truc2 {
+  font-size: 26px;
+}
+ul .truc3 {
+  font-size: 36px;
+}
+ul .truc4 {
+  font-size: 46px;
+}
+ul .truc5 {
+  font-size: 56px;
+}
+
+h1 {
+  color: red;
+}
+
+section.sass {
+  background-color: aquamarine;
+}
+section.sass h2 {
+  background-color: brown;
+  padding: 5px;
+}
+section.sass h2 span {
+  font-style: italic;
+}
+section.sass h2:hover {
+  transform: scale(1.2);
+}
+
+.scss, header {
+  background-color: violet;
+}
+
+.copy, .menu, main ul, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Les mixins vont ressembler aux extends, si ce n'est qu'elles sont plus paramétrable.
+  elle se déclarent avec "@mixin unNom()"
+
+  On peut ajouter des proprietés sous forme de variable à nos,mixins, celles ci devont alors etre transmise lors de l'appelle. 
+  EN ajoutant "unevaleur" aprés */
+.copy {
+  font-size: 3rem;
+  background-color: paleturquoise;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  font-size: 3rem;
+  background-color: mediumpurple;
+  position: absolute;
+  top: 20px;
+  left: 80vw;
+  transform: translate(-50%, 100%);
+}
+
+/*
+    Une fonction permet de prendre une valeur en paraétre, et de la modifier avant de la renvoyer, ici par exemple on prend une couleur, on cherche la couleur compémentaire,
+    on l'éclairci un peu,
+    puis on la renvoi avec "@return"
+*/
+.copy {
+  color: rgb(194.1145251397, 224.1284916201, 132.3715083799);
+}
+
+.copy {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.menu {
+  width: 10rem;
+  height: 5rem;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

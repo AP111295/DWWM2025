@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../cours"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dwwm2025"
+	}
+}

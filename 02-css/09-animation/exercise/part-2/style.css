@@ -1,0 +1,38 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+main
+{
+   display: flex;
+   flex-direction: row;
+   margin-top: 15%;
+
+} 
+p{
+    position: absolute;
+    color: burlywood;
+    font-size:xx-large;
+    animation: animateline 6s linear infinite;
+    white-space:nowrap;
+
+}
+p::after{
+    content: "Il y a 10 types de personnes, ceux qui comprennent cette blague et ceux qui ne la comprennent pas.";}
+
+
+@keyframes animateline {
+    0%{
+        right: -100%;
+    }
+
+    100%{
+        right: 0;
+    }
+}

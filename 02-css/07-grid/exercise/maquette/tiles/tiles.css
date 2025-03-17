@@ -1,0 +1,56 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    padding: 2%;
+}
+
+.container
+{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(8, 150px);
+}
+img
+{
+    width: 200px;
+   
+}
+
+@media screen and (max-width:900px) {
+    .container
+    {
+        display: grid;
+        justify-content: center;
+        grid-template-rows: repeat(5, 110px);
+        grid-template-columns: repeat(2, 160px);
+        gap: 7%;
+    
+    
+    }
+    img
+    {
+        width: 200px;
+       
+    } 
+}
+
+@media screen and (max-width:500px){
+    .container
+{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(8, 150px);
+}
+img
+{
+    width: 200px;
+   
+} 
+}
+
+

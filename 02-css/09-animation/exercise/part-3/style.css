@@ -1,0 +1,82 @@
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(196, 150, 82);
+}
+.container
+{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 500px;
+}
+.circle1, .circle2, .circle3
+{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+}
+.circle1{
+    position: relative;
+    animation:0.5s;  
+    animation-name:animatecircle1;
+    animation-direction:alternate;
+    animation-timing-function:ease;
+    animation-iteration-count:infinite; 
+   }
+
+@keyframes animatecircle1 {
+    from {
+        top: 25%;
+        transform: scaleX(100%) scaleY(100%);
+      }
+      to {
+        top: 55%;
+      }
+
+}
+.circle2{
+    position: relative;
+    animation: bounce 0.6s;
+    animation-name: animatecircle2;
+    animation-direction:alternate;
+    animation-timing-function:ease;
+    animation-iteration-count:infinite;
+
+}
+@keyframes animatecircle2 {
+    from {
+        top: 25%;
+        transform: scaleX(100%) scaleY(100%);
+      }
+      to {
+        top: 55%;
+      }
+
+}
+.circle3{
+    position: relative;
+    animation: bounce 0.7s;
+    animation-name: animatecircle3;
+    animation-direction:alternate;
+    animation-timing-function:ease;
+    animation-iteration-count:infinite;
+
+}
+@keyframes animatecircle3 {
+    from {
+        top: 25%;
+        transform: scaleX(100%) scaleY(100%);
+      }
+      to {
+        top: 55%;
+      }
+
+}
