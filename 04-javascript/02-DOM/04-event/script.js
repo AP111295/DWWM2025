@@ -190,12 +190,20 @@ lis.forEach(double);
     faire que lorsque l'on passe sur le span du footer, il commence à suivre la souris
     et cela jusqu'à ce que l'on clique, il retournera alors à sa position d'origine.
 */
+const footer = document.getElementsByTagName("footer");
+const span = document.getElementsByTagName("span");
+console.log(footer, span);
 
-var span = document.getElementsByTagName("span");
-document.addEventListener("mousenter", function(e){
-  var x = e.clientX;
-  var y = e.clienty;
-  span.style.top=y+"px";
-  span.style.left=x+"px";
+function enter()
+{
+  span.addEventListener("mouseenter", function(e){
+    span.style.height = "100px"
 
-})
+  })
+}
+function leave()
+{
+  span.addEventListener("mouseleave", function(e){
+    span.style.height = "18px"
+  })
+}

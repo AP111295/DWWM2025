@@ -1,0 +1,44 @@
+body{
+    height: 100vh;
+}
+.clock{
+    position: relative;
+    width: fit-content;
+}
+img{
+
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+}
+.hand {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0;
+    translate: 0% -50%;
+    rotate: -90deg;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0, 1.24, 1, 1);
+    
+}
+
+.hours 
+{ 
+    width: 150px;
+    height: 6px; 
+    background: black;
+    transform-origin: 0;
+}
+.minutes { height: 4px; 
+    background-color: pink;
+    transform-origin: 0;
+    
+  
+}
+.secondhand{ height: 2px; 
+    background: red; 
+    transform-origin: 0;
+   
+}
