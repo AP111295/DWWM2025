@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Exercise</title>
+</head>
+<body>
+    <div>
+        <form id="registrationForm">
+            <!-- <h2>Coordonées</h2> -->
+             <fieldset>
+             <legend>Coordonéess</legend><br>
+            <label for="teleInput">Téléphone:</label>
+            <input type="tele" id="teleInput" oninput="validateTeleInput()">
+            <span id="teleFeedback" style="color: red;"></span> 
+
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" oninput="validateEmailInput()">
+            <span id="emailFeedback" style="color: red;"></span> 
+            <button>Submit</button>
+          </form></fieldset>
+    </div>
+    <div>
+       
+       
+        <form id="identifiants">
+            <fieldset>
+                <legend>Identifiants</legend><br>
+            <label for="username">Nom d'Utilisateur:</label>
+            <input type="user" id="username" oninput="validateUsername(this.value)">
+            <span id="userFeedback" style="color: red;"></span> 
+
+            <label for="password">Mot de passe:</label>
+            <input type="text" id="password" oninput="">
+            <input type="color">
+            <span id="passwordFeedback" style="color: red;"></span> 
+
+            <label for="confirmation">Confirmation du mot de passe:</label>
+            <input type="text" id="confirmation" oninput="">
+            <span id="confirmFeedback" style="color: red;"></span> 
+        </form>
+    </fieldset>
+    </div>
+</body>
+</html>
