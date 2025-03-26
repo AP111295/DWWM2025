@@ -63,7 +63,6 @@ function validateUsername(username) {
        $ : End 
 */
 
-
 // Test cases
 // console.log(validateUsername("user123"));
 // console.log(validateUsername("_user"));  
