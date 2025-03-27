@@ -60,3 +60,12 @@ et que celcui ci fait au moins 500px */
 @media (prefers-color-scheme: dark){}
 /* En cas de navigateur en thème clair */
 @media (prefers-color-scheme: light){}
+
+
+/* 
+if starting from mobile first 
+@media(min-width: 600px){}
+
+if starting from desktop first
+@media(max-width: 600px){}
+ */
