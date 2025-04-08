@@ -1,0 +1,12 @@
+.container
+{
+    text-align: center;
+    margin-top: 5%;
+}
+select{
+    height: 40px; 
+    border: lightblue solid 1px;
+    background-color:beige;
+    color: black;
+    
+}

@@ -1,0 +1,17 @@
+
+
+{"language":{
+    "française":{
+        "h1":"Mon site génial",
+        "p":"Ce site vos propose un contenu des plus passionant"
+    },
+    "english":{
+       "h1":"My awesome site",
+       "p":"This site offers you the most exciting content"
+    },
+   "हिन्दी":{
+       "h1":"मेरी अद्भुत साइट", 
+        "p":"यह साइट आपको सबसे रोमांचक सामग्री प्रदान करती है"
+    }
+}}
+

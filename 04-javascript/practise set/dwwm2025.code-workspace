@@ -1,16 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "dwwm2025",
 			"path": "../.."
 		},
 		{
+			"name": "cours",
 			"path": "../../../cours"
-		},
-		{
-			"path": "../../../Portfolio"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "dwwm2025"
+		"liveServer.settings.multiRootWorkspaceName": "dwwm2025",
+		"liveServer.settings.port": 5501
 	}
 }
