@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <title>The image slider</title>
+</head>
+<body>
+<!-- 1. HTML (Structure de la Page)
+
+Le principal élément est <div class="slideshow-container">, qui contient toutes les images.
+
+Chaque image est placée dans un <div class="mySlides fade">, ce qui permet d’avoir un effet de fondu entre les images.
+
+Il y a des flèches gauche (❮) et droite (❯) pour naviguer entre les images.
+
+Il y a aussi des points en bas, permettant de passer d’une image à l’autre. -->
+  <div class="slideshow-container">
+    <div class="alltheslides"> 
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="flamingo.jpg" style="width: 100%">
+        <div class="text">A flamingo</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="owl.jpg" style="width:100%">
+        <div class="text">An owl</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="blue.jpg" style="width:100%">
+        <div class="text">A blue bird</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="chick.jpg" style="width:100%">
+        <div class="text">A duckling</div>
+      </div>
+    </div>
+    <a class="prev" >❮</a>
+    <a class="next" >❯</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+</body>
+</html>
