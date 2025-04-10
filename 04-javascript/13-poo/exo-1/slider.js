@@ -11,6 +11,7 @@ const slider = {
     const { slider, img } = this;
     // const slider = this.slider;
     // const img = this.img;
+    slider.style.margin = "auto";
     slider.style.width = "600px";
     slider.style.height = "300px";
     slider.style.overflow = "hidden";

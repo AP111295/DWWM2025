@@ -56,35 +56,3 @@ btn.addEventListener('click', function correctinput() {
 
 
 
-
-
-
-// let text;
-// let input = prompt("choisissez un nombre entre 1 et 100");
-// switch(numbers) {
-//   case "input = 92":
-//     text = "Vous avez trouvé unne bonne réponse";
-//     break;
-//   case "input > 92":
-//     text = "cest plus petit que";
-//     break;
-//   case "input < 92":
-//     text = "cest plus grand que";
-//     break;
-// }
-
-// input.addEventListener('click', function correctinput() {
-//     if (input = 92) {
-//         alert ("Vous avez trouvé unne bonne réponse");
-//         backside.style.animation = "rotate";
-//     } else if (input > 92) {
-//         alert ("cest plus petit que($)");
-//     } else {
-//         alert ("cest plus grand que($)");
-//     }
-//   });
-// console.log('correctinput');
-
-
-
-
