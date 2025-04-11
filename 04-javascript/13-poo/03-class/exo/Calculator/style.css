@@ -1,0 +1,22 @@
+.calculator{
+    padding: 50px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+    margin: auto;
+}
+.screen {
+    width: 292px;
+    margin: auto;
+}
+
+.button {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    }
+.btn {
+    height: 60px;
+    width: 60px;
+}
