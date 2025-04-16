@@ -38,9 +38,9 @@ class starsgrade extends HTMLElement {
     }
 
     addEvent() {
-        this.stars.forEach((star, index1) => {
-            star.addEventListener("click", () => {
-                this.stars.forEach((star, index2) => {
+        this.stars.forEach((star, index1) => { // adding eventlistener for each stars
+            star.addEventListener("click", () => { 
+                this.stars.forEach((star, index2) => { 
                     index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
                 });
                 // Optional: Update value attribute on click if needed
