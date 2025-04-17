@@ -1,12 +1,11 @@
 {
 	"folders": [
 		{
-			"name": "dwwm2025",
-			"path": "../.."
-		},
-		{
 			"name": "cours",
 			"path": "../../../cours"
+		},
+		{
+			"path": "../.."
 		}
 	],
 	"settings": {

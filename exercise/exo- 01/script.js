@@ -6,7 +6,7 @@
 // j'ai mai un Shadow DOM dans le conteneur .container. Cela permet d’isoler le style et le HTML du reste de la page.
 const myelement = document.querySelector("#shadow-element");
 myelement.attachShadow({ mode: "open"});
-const childNotes = Array.from(myelement.childNodes);
+const childNotes = Array.from(myelement.childNodes);// because its a table of data. 
 myelement.shadowRoot.append(...childNotes)
 
 const styling = document.createElement("style"); //Ajout de style CSS dans le Shadow DOM
