@@ -40,7 +40,6 @@ let input;
 
 //Depending on the type, we create either an <input> or a <textarea> element.
 
-
 input.name = field.name;
   input.id = field.name;
 
