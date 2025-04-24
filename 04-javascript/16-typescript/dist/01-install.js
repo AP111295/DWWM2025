@@ -1,3 +1,4 @@
+"use strict";
 /*
    typescript est une surcouche à Javascript.
    il permet d'ajouter des fonctionnalités que l'on trouve habituellement dans les langages de développement plus classique.
@@ -30,9 +31,18 @@ ou si on veut que le terminal surveille tout changement :
 */
 const btn = document.querySelector("#compte");
 let i = 0;
-btn.addEventListener("click", () => {
+btn?.addEventListener("click", () => {
     i++;
     // btn.textContent = i;
     btn.textContent = i.toString();
 });
+/*
+    Par défaut typescript transpile vers ES3 qui est assez vieux.
+    On peut modifier cela en ajoutant à notre tsconfig :
+       * target: ESNext (ou autre version de ES)
+    On peut profiter d'etre ici pour ajouter des options supplémentaires comme :
+       * noEmitOnError: true
+    Ou :
+       * strict : true
 
+*/ 
