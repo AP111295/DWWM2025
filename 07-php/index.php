@@ -68,6 +68,9 @@ require "./ressources/template/_header.php";
                 <li>
                     <a href="./02-form/07-mail.php">Mailer</a>
                 </li>
+                <li>
+                    <a href="./02-form/08-login.php">login page</a>
+                </li>
             </ol>
         </li>
         <!-- <li>

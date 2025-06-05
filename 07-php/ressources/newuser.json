@@ -1,0 +1,14 @@
+{
+  "jdupont": { 
+    "prenom": "Jean", 
+    "password": "$2y$10$Hd2axMscNUgyRtkAaJzA/eEvSS19LYqvWpryTpzVs4ZzXunq8RFcm",
+    "bio": "Junior web developer.", 
+    "photo": "../uploads/jdupont.jpg" 
+  }, 
+  "amartin": { 
+    "prenom": "Alice", 
+    "password": "$2y$10$Hd2axMscNUgyRtkAaJzA/eEvSS19LYqvWpryTpzVs4ZzXunq8RFcm",
+    "bio": "Web mobile student.", 
+    "photo": "../uploads/amartin.png" 
+  }
+}
