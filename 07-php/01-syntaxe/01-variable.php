@@ -24,7 +24,8 @@ echo "Hello", "World";
 # Once displayed, the data is treated as HTML:
 echo "<br> PHP !!! <hr>";
 /* 
-    There are other options for displaying data, for example, "print," which returns a value of 1 and is a little slower to execute.
+    There are other options for displaying data, for example,
+    "print," which returns a value of 1 and is a little slower to execute.
 */
 print "<br> test avec print <br> ";
 /* 
@@ -39,38 +40,39 @@ echo getenv("DB_HOST");
 
 #------------------------------------
 echo "<h1>Déclaration des variables</h1><hr>";
-// Les variables PHP commencent toujours par un "$"
-// Ensuite on peut la nommer comme on le souhaite, mais elle ne doit pas commencer par un chiffre
+//  PHP variables always begin with a "$"
+// You can then name them however you like, but they must not begin with a number
 $banane;
 // echo $banane;
-// Lors d'un warning, le message d'erreur s'affiche, mais le code continue
+// When a warning occurs, the error message is displayed, but the code continues
 echo "<br><strong>après warning</strong>";
 // throw new ErrorException("test");
-// Lors d'un fatal error, le code s'arrête
+// In the event of a fatal error, the code stops
 echo "<br><strong>après fatal Error</strong>";
 
 $banane = "Jaune";
 echo "<br>banane :", $banane;
 /* 
-    Pour les constantes deux façon de les déclarer:
-    Anciennement "define('nom', 'valeu')"
-    Ou nouvellement "const nom = valeur;"
+There are two ways to declare constants:
+Previously "define('name', 'value')"
+Or, newer, "const name = value;"
 */
 define("AVOCAT", "vert");
 const AVOCATS = "verreux";
 
 echo "<br>Un avocat est ", AVOCAT, " ou ", AVOCATS, "?<hr>";
 
-// Récupère un tableau des variables définie
+// Retrieves an array of defined variables
 // var_dump(get_defined_vars());
-// De même pour les constantes
+// Same for constants
 // var_dump(get_defined_constants());
 
-// variable dynamique :
+// dynamic variable:
 $chaussette = "rouge";
-// chaussette est une variable qui vaut "rouge"
+//sock is a variable that has the value "rouge"
 $$chaussette = "bleu";
-// Je met la valeur "bleu" dans une variable dont le nom dépend du contenu de la variable "chaussette"
+//I put the value "blue" into a variable whose name depends on the contents of the variable "chaussette"
+
 echo $rouge;
 
 unset($banane);
