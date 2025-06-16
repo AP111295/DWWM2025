@@ -49,4 +49,3 @@ if($users):
 <?php endif;
 require "../ressources/template/_footer.php";
 ?>
-

@@ -44,7 +44,7 @@ require "./ressources/template/_header.php";
                 </li> -->
             </ol>
         </li>
-         <li>
+        <li>
             <h3>02 - Formulaire :</h3>
             <ol>
                 <li>
@@ -69,24 +69,47 @@ require "./ressources/template/_header.php";
                     <a href="./02-form/07-mail.php">Mailer</a>
                 </li>
             </ol>
-        </li>
+        </li> 
         <li>
             <h3>03 - CRUD :</h3>
             <ol>
+                <li>
+                    <a href="./03-crud/00-database.php">Connexion à la bdd</a>
+                </li>
                 <li>
                     <a href="./03-crud/02-read.php">Liste Utilisateur</a>
                 </li>
                 <li>
                     <a href="./03-crud/01-create.php">Inscription</a>
                 </li>
+                <?php if(isset($_SESSION["logged_in"])) :?>
+                    <li>
+                        <a href="./03-crud/03-update.php">Profil</a>
+                    </li>
+                    <li>
+                        <a href="./03-crud/04-delete.php">Supprimer Compte</a>
+                    </li>
+                <?php endif; ?>
                 <li>
                     <h4>Exercice :</h4>
                     <ul>
+                        <?php if(!isset($_SESSION["logged_in"])) :?>
                         <li>
-                            <a href="./03-crud/exo/connexion.php">connexion</a>
+                            <a href="./03-crud/exercice/login.php">connexion</a>
                         </li>
+                        <?php else: ?>
                         <li>
-                            <a href="../03-crud/exo/deconnexion.php">déconnexion</a>
+                            <a href="./03-crud/exercice/deconnexion.php">déconnexion</a>
+                        </li>
+                        <?php endif; ?>
+                         <li>
+                            <a href="./03-crud/exercice/message.php">Message</a>
+                        </li>
+                         <li>
+                            <a href="./03-crud/exercice/new_msg.php">New Message</a>
+                        </li>
+                         <li>
+                            <a href="./03-crud/exercice/delete_msg.php">Delete Message</a>
                         </li>
                     </ul>
                 </li>

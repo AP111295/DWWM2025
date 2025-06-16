@@ -26,6 +26,10 @@ USE `blog`;
 --
 -- Structure de la table `messages`
 --
+CREATE TABLE categories ( -- my code 
+    idCategory INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+); -- till here
 
 CREATE TABLE IF NOT EXISTS `messages` (
   `idMessage` int(11) NOT NULL AUTO_INCREMENT,
@@ -33,6 +37,9 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `createdAt` datetime NOT NULL DEFAULT current_timestamp(),
   `editedAt` datetime DEFAULT NULL,
   `idUser` int(11) NOT NULL,
+  'idCategory' INT NULL, --my code 
+    FOREIGN KEY (idUser) REFERENCES users(idUser),
+    FOREIGN KEY (idCategory) REFERENCES categories(idCategory) -- till here
   PRIMARY KEY (`idMessage`),
   KEY `fk_user` (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -47,6 +54,9 @@ CREATE TABLE IF NOT EXISTS `messages` (
 ALTER TABLE `messages`
   ADD CONSTRAINT `fk_user` FOREIGN KEY (`idUser`) REFERENCES `users` (`idUser`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
+
+ALTER TABLE `messages` -- my code 
+  ADD 'Category' VARCHAR(50); -- till here
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

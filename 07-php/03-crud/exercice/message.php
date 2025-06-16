@@ -17,7 +17,7 @@ require "../../ressources/template/_header.php";
 $pdo = new PDO('mysql:host=bddsql;dbname=exo', 'root', 'root'); 
 
 // (1 = Maurice)
-$userId = 1;
+$userId = $_GET["id"] ?? $_SESSION["user_id"] ?? 0;
 
 // Fetch messages
 $stmt = $pdo->prepare("SELECT * FROM messages WHERE idUser = ?");
@@ -31,6 +31,7 @@ echo "<h1>User message</h1>";
 foreach ($messages as $message) {
     echo "<p><strong>Posted on:</strong> " . $message['createdAt'] . "<br>";
     echo "<strong>Message:</strong> " . htmlspecialchars($message['message']) . "</p>";
+    echo "<strong>Button:</strong> <a href='./delete_msg.php?id=". $message['idMessage'] ."'>delete</a>";
 }
 
 

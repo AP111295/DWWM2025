@@ -5,9 +5,9 @@ require "../ressources/service/_shouldBeLogged.php";
 
 shouldBeLogged(false, "/");
 /* 
-    Pour des raisons de simplicité du cours, on n'a pas mit de securité sur ce formulaire, 
-    mais pensez à en ajouter sur vos projets.
-    (csrf, captcha, confirmation du mail...)
+    For simplicity in this course, no security was added to this form, 
+but remember to include it in your projects.
+(csrf, captcha, email confirmation...)
 */
 $username = $email = $password = "";
 $error = [];
@@ -23,12 +23,12 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inscription']))
     else
     {
         $username = cleanData($_POST["username"]);
-        // preg_match permet de vérifier une regex.
+        // preg_match is used to validate a regex.
         if(!preg_match("/^[a-zA-Z' -]{2,25}$/", $username))
         {
             $error["username"] = "Votre nom d'utilisateur ne doit contenir que des lettres. (entre 2 et 25)";
         }
-    }// fin vérification username
+    }// end of username check
     if(empty($_POST["email"]))
     {
         $error["email"] = "Veuillez saisir un email";
@@ -37,10 +37,10 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inscription']))
     {
         $email = cleanData($_POST["email"]);
         /* 
-            filter_var peut retourner un boolean indiquant si le premier paramètre est valide selon le filtre indiqué en second paramètre.
-            Ou retourné un string modifié selon le filtre donné.
-                FILTER_VALIDATE_*** => boolean
-                FILTER_SANITIZE_*** => string
+            filter_var can return a boolean indicating whether the first parameter is valid according to the specified filter,
+or a modified string depending on the given filter.
+    FILTER_VALIDATE_*** => boolean
+    FILTER_SANITIZE_*** => string
         */
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
@@ -48,19 +48,19 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inscription']))
         }
         else
         {
-            // Je prépare ma requête
+            // I prepare my query
             $sql = $pdo->prepare("SELECT * FROM users WHERE email=?");
-            // Je lance ma requête 
+            // I execute my query 
             $sql->execute([$email]);
-            // Je récupère mon résultat
+            // I fetch my result
             $user = $sql->fetch();
-            // Si j'ai trouvé un utilisateur, alors cet email est déjà utilisé
+            // If I found a user, then this email is already in use
             if($user)
             {
                 $error["email"] = "Cet email est déjà utilisé";
             }
         }
-    }// fin vérification email
+    }// end of email verification
     if(empty($_POST["password"]))
     {
         $error["password"] = "Veuillez saisir un mot de passe";
@@ -74,10 +74,10 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inscription']))
         }
         else
         {
-            // ! Je hash le mot de passe
+            // ! I hash the password
             $password = password_hash($password, PASSWORD_DEFAULT);
         }
-    }// fin vérification password
+    }// end of password verification
     if(empty($_POST["passwordBis"]))
     {
         $error["passwordBis"] = "Veuillez confirmer votre mot de passe";
@@ -85,15 +85,15 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['inscription']))
     elseif($_POST["password"] !== $_POST["passwordBis"])
     {
         $error["passwordBis"] = "Veuillez saisir le même mot de passe";
-    }// fin confirmation password
+    }// end of password confirmation
     if(empty($error))
     {
-        // Si on n'a pas d'erreur, alors on peut enregistré notre utilisateur en BDD
+        // If there are no errors, we can save the user in the database
         $sql = $pdo->prepare("INSERT INTO users(username, email, password) VALUES(?, ?, ?)");
-        // je lance la requête :
+        // I execute the query :
         $sql->execute([$username, $email, $password]);
 
-        // Une fois terminé, je peux rediriger mon utilisateur ailleurs :
+        // Once finished, I can redirect the user elsewhere:
         header("Location: /");
         exit;
     }
