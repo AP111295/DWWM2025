@@ -33,7 +33,7 @@ require "./ressources/template/_header.php";
                 <li>
                     <a href="./01-syntaxe/09-a-header.php">header</a>
                 </li>
-                <!-- <li>
+                <li>
                     <a href="./01-syntaxe/10-a-poo.php">POO part 1</a>
                 </li>
                 <li>
@@ -41,7 +41,7 @@ require "./ressources/template/_header.php";
                 </li>
                 <li>
                     <a href="./01-syntaxe/10-c-poo.php">POO part 3</a>
-                </li> -->
+                </li>
             </ol>
         </li>
         <li>
@@ -53,7 +53,7 @@ require "./ressources/template/_header.php";
                 <li>
                     <a href="./02-form/02-post.php">POST</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="./02-form/03-file.php">FILE</a>
                 </li>
                 <li>
@@ -67,7 +67,7 @@ require "./ressources/template/_header.php";
                 </li>
                 <li>
                     <a href="./02-form/07-mail.php">Mailer</a>
-                </li>
+                </li> -->
             </ol>
         </li> 
         <li>
@@ -102,42 +102,44 @@ require "./ressources/template/_header.php";
                             <a href="./03-crud/exercice/deconnexion.php">déconnexion</a>
                         </li>
                         <?php endif; ?>
-                         <li>
-                            <a href="./03-crud/exercice/message.php">Message</a>
-                        </li>
-                         <li>
-                            <a href="./03-crud/exercice/new_msg.php">New Message</a>
-                        </li>
-                         <li>
-                            <a href="./03-crud/exercice/delete_msg.php">Delete Message</a>
-                        </li>
                     </ul>
                 </li>
             </ol>
         </li>
-        <!-- <li>
+        <li>
             <h3>04 - ROUTER :</h3>
             <ol>
                 <li>
-                    <a href="./04-router">Page 1</a>
+                    <a href="./04-router">Liste utilisateur</a>
                 </li>
                 <li>
-                    <a href="./04-router/p2">Page 2</a>
+                    <a href="./04-router/inscription">Inscription</a>
                 </li>
+                <?php if(isset($_SESSION["logged"])) :?>
+                    <li>
+                        <a href="./04-router/profil">Profil</a>
+                    </li>
+                    <li>
+                        <a href="./04-router/profil/supprimer">Supprimer Compte</a>
+                    </li>
+                <?php endif; ?>
                 <li>
                     <h4>Exercice :</h4>
                     <ul>
-                        <li>
-                            <a href="./04-router/exercice">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="./04-router/exercice/p2">page 2</a>
-                        </li>
+                        <?php if(!isset($_SESSION["logged"])) :?>
+                            <li>
+                                <a href="./04-router/connexion">connexion</a>
+                            </li>
+                            <?php else: ?>
+                            <li>
+                                <a href="./04-router/deconnexion">deconnexion</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </li>
             </ol>
-        </li> -->
-        <!-- <li>
+        </li>
+        <li>
             <h3>05 - MVC :</h3>
             <ol>
                 <li>
@@ -146,41 +148,63 @@ require "./ressources/template/_header.php";
                 <li>
                     <a href="./05-mvc/inscription">Inscription</a>
                 </li>
-                <li>
-                    <h4>Exercice :</h4>
-                    <ul>
-                        <li>
-                        <a href="./05-mvc/connexion">Connexion</a>
+                
+                <?php if(isset($_SESSION["logged"])) :?>
+                    <li>
+                        <a href="./05-mvc/profil">Profil</a>
                     </li>
                     <li>
-                        <a href="./05-mvc/deconnexion">Déconnexion</a>
+                        <a href="./05-mvc/profil/supprimer">Supprimer Compte</a>
                     </li>
+                <?php endif; ?>
+                <li>
+                    <h4>Exercice :</h4>
+                    <ul>
+                        <?php if(!isset($_SESSION["logged"])) :?>
+                            <li>
+                                <a href="./05-mvc/connexion">connexion</a>
+                            </li>
+                            <?php else: ?>
+                            <li>
+                                <a href="./05-mvc/deconnexion">deconnexion</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </li>
             </ol>
-        </li> -->
-        <!-- <li>
-            <h3>06 - POO :</h3>
+        </li>
+        <li>
+            <h3>06 - API :</h3>
             <ol>
                 <li>
-                    <a href="./06-poo/">Liste Utilisateur</a>
+                    <a href="./06-api/front">Liste Utilisateur</a>
                 </li>
                 <li>
-                    <a href="./06-poo/inscription">Inscription</a>
+                    <a href="./06-api/front/inscription">Inscription</a>
                 </li>
                 <li>
                     <h4>Exercice :</h4>
                     <ul>
-                        <li>
-                            <a href="./06-poo/connexion">Connexion</a>
-                        </li>
-                        <li>
-                            <a href="./06-poo/deconnexion">Déconnexion</a>
-                        </li>
                     </ul>
                 </li>
             </ol>
-        </li> -->
+        </li>
+        <li>
+            <h3>07 - POO :</h3>
+            <ol>
+                <li>
+                    <a href="./07-poo/">Liste Utilisateur</a>
+                </li>
+                <li>
+                    <a href="./07-poo/inscription">Inscription</a>
+                </li>
+                <li>
+                    <h4>Exercice :</h4>
+                    <ul>
+                    </ul>
+                </li>
+            </ol>
+        </li>
     </ol>
 <?php 
 require "./ressources/template/_footer.php";
