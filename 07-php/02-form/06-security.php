@@ -128,7 +128,7 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['password']))
         <br>
         <img src="../ressources/service/_captcha.php" alt="captcha">
         <br>
-        <input type="text" name="captcha" id="captcha" pattern="[A-Z0-9]{6}">
+        <input type="text" name="captcha" id="captcha" pattern="[a-zA-Z0-9]{6}" required>
     </div>
     <!-- end captcha -->
     <!-- CSRF -->

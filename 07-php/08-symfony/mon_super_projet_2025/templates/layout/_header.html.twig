@@ -5,9 +5,6 @@
   <h1>{{ title ?? "Cours Symfony" }}</h1>
 {% endif %}
 <nav class="header-navigation"> 
-    <a href="{{path('app_home')}}" class="{{ app.current_route == 
-'app_home'?'active':''}}">Accueil</a> 
-    <a href="" class="{{ app.current_route == 'app_user_list'?'active':''}}">Liste 
-Utilisateur</a>
+    <a href="{{path('app_home')}}" class="{{ app.current_route == 'app_home'?'active':''}}">Accueil</a> 
 </nav>
 </header>
