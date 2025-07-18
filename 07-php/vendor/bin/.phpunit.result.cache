@@ -1,0 +1,1 @@
+{"version":1,"defects":{"csrfTest::testSetCSRFOutputAndSession":5},"times":{"CalculatorTest::testAdd":0.001,"CalculatorTest::testDivide":0.001,"CalculatorTest::testDivideByZero":0.001,"csrfTest::testSetCSRFOutputAndSession":0.001}}

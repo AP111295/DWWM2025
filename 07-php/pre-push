@@ -1,0 +1,14 @@
+
+PHPUNIT=./07-php/vendor/bin/PHPunit 
+TEST_DIR=./07-php/09-testing/tests
+
+echo "Hook pre-push détecté"
+
+if ["$RUN_TESTS" != "1"]; then
+    echo "RUN_TESTS n'est pas défini -> pas de tests"
+    exit 0;
+fi
+
+echo "Tests réussis. Push autorisé."
+
+ 
